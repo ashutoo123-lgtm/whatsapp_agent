@@ -1,0 +1,9 @@
+uvicorn
+pydantic
+python-dotenv
+typing
+httpx
+requests
+fastapi
+twilio
+python-multipart
