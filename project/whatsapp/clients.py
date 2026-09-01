@@ -6,7 +6,7 @@ TWILIO_WHATSAPP_NUMBER = os.getenv("TWILIO_WHATSAPP_NUMBER")
 client = Client(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN)
 async def message_sender(recipient:str,
                          text : str):
-    message = client.messages.create(from_ = TWILIO_AUTH_TOKEN,
+    message = client.messages.create(from_ = TWILIO_WHATSAPP_NUMBER,
                                      to = recipient,
                                      body = text)
     return message.sid

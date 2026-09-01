@@ -25,7 +25,7 @@ app = FastAPI()
 async def post_request(request : Request):
     
     form = await request.form()
-    message = parsed_message(form)
+    message = await parsed_message(form)
     response = await generate_llm_response(message.text)
     message_sender(to = message.sender_id,
                    body = response)
